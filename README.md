@@ -42,7 +42,7 @@ A sleek, responsive, and interactive **To-Do List App** built using **HTML, CSS,
 
 ## 🚀 Live Demo
   
-  **👉 [Live Demo](https://your-live-demo-url.com)**
+  **👉 [Live Demo](https://akashkumar2011.github.io/JS-To-Do-List-App/)**
 
 
 ## 📱 Responsive Design
