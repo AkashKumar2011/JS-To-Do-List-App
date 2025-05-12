@@ -8,8 +8,8 @@ body {
   }
   
   .container {
-    max-width: 850px;
-    margin: 40px auto;
+    max-width: 80%;
+    margin: 3rem auto;
     background: #f0f4f8;
     padding: 20px;
     border-radius: 12px;
@@ -31,13 +31,33 @@ body {
   }
   
   input[type="text"],
-  input[type="date"],
+  input[type="date"]{
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: #fff;
+    color: #333;
+    transition: 0.3s;
+    width: 95.5
+  }
   select,
   button {
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
     flex: 1;
+    font-size: 1rem;
+    font-weight: 500;   
+    letter-spacing: 0.5px;
+    background: #fff;
+    color: #333;
+    transition: 0.3s;
+    width: 100
+
   }
   
   .addBtn {
@@ -117,10 +137,31 @@ body {
     gap: 1rem;
   }
   .task span{
+    font-size: 1rem;         /* Controls text size (use rem for responsiveness) */
+    font-family: Arial, sans-serif; /* Defines the font style */
+    text-align: left;
+    font-weight: 500;       /* Controls text weight (boldness) */
+    letter-spacing: 0.5px;   /* Optional: Adjusts spacing between characters */
+    word-spacing: 1px; 
+    width: 100%;
+  }
+  .task-form input[type="text"]{
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.7px;
   }
+
+  /* .checkBox{
+    flex-grow: 1;
+  }
+  .task{
+    flex-grow: 8;
+    width: 90%;
+  }
+  .task-controls{
+    flex-grow: 1;
+  } */
+
 
   @media (max-width: 768px) {
     .task{

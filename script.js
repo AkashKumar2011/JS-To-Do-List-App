@@ -40,17 +40,18 @@ function renderTasks() {
     taskDiv.appendChild(taskText2);
     taskDiv.appendChild(taskText3);
     
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-        
-    const checkBoxTxt = document.createElement("span");
-    checkBoxTxt.className = "checkBox-txt";
-    checkBoxTxt.textContent = "Completed ✔";
-    checkBoxTxt.style.display = task.completed ? "block" : "none";
-    taskDiv.appendChild(checkbox);
+    const checkBox = document.createElement("input");
+    checkBox.type = "checkBox";
+    checkBox.className = "checkBox";
 
-    checkbox.checked = task.completed;
-    checkbox.addEventListener("change", () => {
+    const checkBoxDiv = document.createElement("div");
+    checkBoxDiv.className = "checkBox-div";
+    checkBoxDiv.textContent = "Completed";
+    checkBoxDiv.appendChild(checkBox);
+    
+
+    checkBox.checked = task.completed;
+   checkBox.addEventListener("change", () => {
       task.completed = checkbox.checked;
       saveTasks();
       renderTasks();
@@ -72,7 +73,7 @@ function renderTasks() {
     controls.appendChild(editBtn);
     controls.appendChild(deleteBtn);
 
-    li.appendChild(checkbox);
+    li.appendChild(checkBox);
     li.appendChild(taskDiv);
     li.appendChild(controls);
 
