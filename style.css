@@ -8,18 +8,18 @@ body {
   }
   
   .container {
-    max-width: 600px;
+    max-width: 850px;
     margin: 40px auto;
-    background: white;
+    background: #f0f4f8;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
+    box-shadow: 0 0 15px #08446f8f;
+}
   
   h1 {
     text-align: center;
     color: #0077cc;
-    margin-bottom: 20px;
+    margin: 0 0 1.5rem 0;
     font-size: 4vw;
   }
   
@@ -40,11 +40,21 @@ body {
     flex: 1;
   }
   
-  button {
+  .addBtn {
     background-color: #0077cc;
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem; 
+    flex: 0 0 auto; 
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
   }
   
   button:hover {
@@ -52,19 +62,23 @@ body {
   }
   
   #task-list {
+    display: flex;
     list-style: none;
     padding: 0;
+    flex-direction: column;
+    gap: 1rem;
   }
   
   .task-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
-    margin-bottom: 10px;
-    background: #f9fbfd;
-    border-left: 6px solid #0077cc;
-    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 0.7rem;
+    color: #fff;
+    background: #000000c2;
+    border-left: 0.5rem solid #0077cc;
+    border-radius: 0.5rem;
   }
   
   .task-item.completed {
@@ -74,15 +88,19 @@ body {
   
   .task-controls {
     display: flex;
-    gap: 5px;
+    gap: 0.5rem;
   }
   
   .task-controls button {
-    padding: 5px 10px;
+    padding: 0.4rem 1rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
     color: white;
     cursor: pointer;
+    letter-spacing: 0.5px;
   }
   
   .edit-btn {
@@ -92,10 +110,41 @@ body {
   .delete-btn {
     background: #dc3545;
   }
-  
-  @media (max-width: 500px) {
+  .task{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .task span{
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+  }
+
+  @media (max-width: 768px) {
+    .task{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0rem;
+    } 
+    h1 {
+      font-size: 5vw;
+    }
+  }
+  @media (max-width: 540px) {
     form {
       flex-direction: column;
+    }
+    .task-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem 0 1.5rem 2rem;
+    } 
+    h1 {
+      font-size: 6vw;
     }
   }
   

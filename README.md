@@ -31,9 +31,23 @@ A sleek, responsive, and interactive **To-Do List App** built using **HTML, CSS,
 5. Mark complete ✅, edit 🖊️, or delete 🗑️.
 6. Your tasks are stored even after refreshing.
 
+
+---
+  
+## 🔗 GitHub Repository 
+
+  **👉 [Live Code](https://akashkumar2011.github.io/JS-To-Do-List-App/)**
+
+---
+
+## 🚀 Live Demo
+  
+  **👉 [Live Demo](https://your-live-demo-url.com)**
+
+
 ## 📱 Responsive Design
 Fully responsive for:
-- 💻 Desktop
+- 💻 Desktop  
 - 📱 Mobile
 - 📊 Tablet
 
@@ -43,16 +57,6 @@ Fully responsive for:
 - JavaScript (DOM Manipulation, LocalStorage)
 
 ---
-
-## 🚀 Live Demo
-  
-  **👉 [Live Demo](https://your-live-demo-url.com)**
-
-
-## 🔗 GitHub Repository 
-
-  **👉 [Live Code](https://github.com/AkashKumar2011/JS-To-Do-List-App.git)**
-
 
 ### Created by: Akash Kumar
 

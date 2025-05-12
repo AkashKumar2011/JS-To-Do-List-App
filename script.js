@@ -19,12 +19,36 @@ function renderTasks() {
     const li = document.createElement("li");
     li.className = `task-item ${task.completed ? "completed" : ""}`;
 
-    const taskText = document.createElement("span");
-    taskText.textContent = `${task.text} (Due: ${task.due || "N/A"}, Priority: ${task.priority})`;
-    taskText.style.flex = 1;
+    // const taskText = document.createElement("span");
+    // taskText.textContent = `${task.text} Due: ${task.due || "N/A"}, Priority: ${task.priority} `;
+    // taskText.style.flex = 1;
 
+    // create wrapper for each task
+    const taskDiv = document.createElement("div"); 
+    taskDiv.classList.add("task");
+
+    const taskText1 = document.createElement("span");
+    const taskText2 = document.createElement("span");
+    const taskText3 = document.createElement("span");
+
+    taskText1.textContent = `Task: ${task.text}`;
+    taskText2.textContent = `Due: ${task.due || "N/A"}`;
+    taskText3.textContent = `Priority: ${task.priority}`;
+
+    // Append spans to the task div
+    taskDiv.appendChild(taskText1);
+    taskDiv.appendChild(taskText2);
+    taskDiv.appendChild(taskText3);
+    
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
+        
+    const checkBoxTxt = document.createElement("span");
+    checkBoxTxt.className = "checkBox-txt";
+    checkBoxTxt.textContent = "Completed ✔";
+    checkBoxTxt.style.display = task.completed ? "block" : "none";
+    taskDiv.appendChild(checkbox);
+
     checkbox.checked = task.completed;
     checkbox.addEventListener("change", () => {
       task.completed = checkbox.checked;
@@ -49,7 +73,7 @@ function renderTasks() {
     controls.appendChild(deleteBtn);
 
     li.appendChild(checkbox);
-    li.appendChild(taskText);
+    li.appendChild(taskDiv);
     li.appendChild(controls);
 
     taskList.appendChild(li);
