@@ -173,7 +173,7 @@ body {
       flex-direction: column;
       justify-content: center;
       gap: 0rem;
-      width: 0;
+      min-width: 0;
     } 
     h1 {
       font-size: 5vw;
@@ -206,7 +206,7 @@ body {
       flex-direction: column;
       justify-content: center;
       gap: 0rem;
-      width: 0;
+      min-width: 0;
     } 
   }
   
