@@ -143,7 +143,7 @@ body {
     font-weight: 500;       /* Controls text weight (boldness) */
     letter-spacing: 0.5px;   /* Optional: Adjusts spacing between characters */
     word-spacing: 1px; 
-    width: 100%;
+/*     width: 100%; */
   }
   .task-form input[type="text"]{
     font-size: 1rem;
@@ -161,7 +161,10 @@ body {
   .task-controls{
     flex-grow: 1;
   } */
-
+.task span div{
+    color: chartreuse;
+    display:block;
+}
 
   @media (max-width: 768px) {
     .task{
@@ -172,6 +175,10 @@ body {
     } 
     h1 {
       font-size: 5vw;
+    }
+    .task span div{
+        color: chartreuse;
+        display: inline-block;
     }
   }
   @media (max-width: 540px) {
@@ -187,5 +194,9 @@ body {
     h1 {
       font-size: 6vw;
     }
+    .task span div{
+        color: chartreuse;
+        display: inline-block;
+    }  
   }
   
