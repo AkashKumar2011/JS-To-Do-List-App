@@ -30,7 +30,11 @@ function renderTasks() {
     const taskText1 = document.createElement("span");
     const taskText2 = document.createElement("span");
     const taskText3 = document.createElement("span");
-
+    
+    taskText1.textContent = `Task:`;
+    taskText2.textContent = `Due:`;
+    taskText3.textContent = `Priority:`;
+    
     // Append spans to the task div
     taskDiv.appendChild(taskText1);
     taskDiv.appendChild(taskText2);
@@ -40,18 +44,16 @@ function renderTasks() {
     const taskdiv2 = document.createElement("div");
     const taskdiv3 = document.createElement("div");
 
-    taskdiv1.textContent = `Task:`;
-    taskdiv2.textContent = `Due:`;
-    taskdiv3.textContent = `Priority:`;
+    taskdiv1.textContent = `${task.text}`;
+    taskdiv2.textContent = `${task.due || "N/A"}`;
+    taskdiv3.textContent = `${task.priority}`;
     
      // Append spans to the task div
     taskText1.appendChild(taskdiv1);
-    taskText2.appendChild(taskdiv1);
-    taskText3.appendChild(taskdiv1);
+    taskText2.appendChild(taskdiv2);
+    taskText3.appendChild(taskdiv3);
 
-    taskText1.textContent = `Task: ${task.text}`;
-    taskText2.textContent = `Due: ${task.due || "N/A"}`;
-    taskText3.textContent = `Priority: ${task.priority}`;
+
     
     const checkBox = document.createElement("input");
     checkBox.type = "checkBox";
