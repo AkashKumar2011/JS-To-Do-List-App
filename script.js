@@ -26,19 +26,32 @@ function renderTasks() {
     // create wrapper for each task
     const taskDiv = document.createElement("div"); 
     taskDiv.classList.add("task");
-
+    
     const taskText1 = document.createElement("span");
     const taskText2 = document.createElement("span");
     const taskText3 = document.createElement("span");
-
-    taskText1.textContent = `<div>Task: </div> ${task.text}`;
-    taskText2.textContent = `<div>Due:</div> ${task.due || "N/A"}`;
-    taskText3.textContent = `<div>Priority:</div> ${task.priority}`;
 
     // Append spans to the task div
     taskDiv.appendChild(taskText1);
     taskDiv.appendChild(taskText2);
     taskDiv.appendChild(taskText3);
+    
+    const taskdiv1 = document.createElement("div");
+    const taskdiv2 = document.createElement("div");
+    const taskdiv3 = document.createElement("div");
+
+    taskdiv1.textContent = `Task:`;
+    taskdiv2.textContent = `Due:`;
+    taskdiv3.textContent = `Priority:`;
+    
+     // Append spans to the task div
+    taskText1.appendChild(taskdiv1);
+    taskText2.appendChild(taskdiv1);
+    taskText3.appendChild(taskdiv1);
+
+    taskText1.textContent = `Task: ${task.text}`;
+    taskText2.textContent = `Due: ${task.due || "N/A"}`;
+    taskText3.textContent = `Priority: ${task.priority}`;
     
     const checkBox = document.createElement("input");
     checkBox.type = "checkBox";
