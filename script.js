@@ -31,9 +31,9 @@ function renderTasks() {
     const taskText2 = document.createElement("span");
     const taskText3 = document.createElement("span");
 
-    taskText1.textContent = `Task: ${task.text}`;
-    taskText2.textContent = `Due: ${task.due || "N/A"}`;
-    taskText3.textContent = `Priority: ${task.priority}`;
+    taskText1.textContent = `<div>Task: </div> ${task.text}`;
+    taskText2.textContent = `<div>Due:</div> ${task.due || "N/A"}`;
+    taskText3.textContent = `<div>Priority:</div> ${task.priority}`;
 
     // Append spans to the task div
     taskDiv.appendChild(taskText1);
